@@ -151,13 +151,7 @@ $deviceInfo = [
                 </div>
             </div>
 
-            <!-- RAM Information Card -->
-            <div class="card">
-                <div class="info-item">
-                    <i class="fa fa-microchip" aria-hidden="true"></i>
-                    <span>RAM: </span> <span id="ram"></span> GB
-                </div>
-            </div>
+           
 
             <!-- Browser Information Card -->
             <div class="card">
@@ -214,7 +208,6 @@ $deviceInfo = [
         document.getElementById('browser').textContent = navigator.userAgent;
 
         // Set RAM Information
-        document.getElementById('ram').textContent = navigator.deviceMemory || 'Unknown';
 
         // Set Screen Size Information
         document.getElementById('screen-size').textContent = `${window.innerWidth} x ${window.innerHeight} px`;
@@ -268,7 +261,6 @@ $deviceInfo = [
             const deviceInfo = {
                 OS: navigator.platform,
                 Battery: document.getElementById('battery').textContent,
-                RAM: `${navigator.deviceMemory || 'Unknown'} GB`,
                 Browser: navigator.userAgent,
                 ScreenSize: `${window.innerWidth} x ${window.innerHeight} px`,
                 DeviceType: detectDeviceType(),
